@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memoire</title>
+    <link rel="stylesheet" href="css/memoire.css">
+    <link rel="icon" href="../images/logo.png" />
+
+
+</head>
+
+<body>
+    <audio id="audio">
+        <source src="../audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="home">
+        <h1>Jeu de mémoire</h1>
+        <!--img src="../images/logo.png" alt="logo"-->
+    </div>
+    <div class="buttons">
+        <div> <input type="button" value="Nouvelle Partie" id="nouvelle_partie">
+        </div>
+        <!-- <div><label for="meilleur_pointage">Meilleur pointage</label>
+            <input type="text" readonly id="meilleur_pointage" value="0">
+        </div> -->
+        <div> <input type="button" value="Quitter" id="quitter">
+        </div>
+    </div>
+    <main>
+        <div id="container_left">
+
+            <div id="container2"></div>
+        </div>
+        <div id="container_middle">
+            <label for="paires_trouvees">Paires trouvees</label>
+            <input type="text" readonly id="paires_trouvees" value=0>
+            <label for="Temps">Temps</label>
+            <input type="text" readonly id="Temps" value=0:0>
+            <label for="meilleur_pointage">Score</label>
+            <input type="text" readonly id="pointage" value=0>
+        </div>
+        <div id="container_right">
+            <input type="button" value="Nouvelle Partie" id="commencer_partie">
+            <input type="button" value="Arrêter" id="arreter">
+        </div>
+    </main>
+    <script src="js/memoire.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', function loaded(event) {
+            window.removeEventListener('DOMContentLoaded', loaded, false)
+            Memoire.init()
+        }, false)
+    </script>
+</body>
+
+</html>
